@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import generics
+from receitas.models import Receita
+from receitas.serializers import ReceitaSerializer
 
-# Create your views here.
+
+class ReceitaListView(generics.ListAPIView):
+    queryset = Receita.objects.all()
+    serializer_class = ReceitaSerializer

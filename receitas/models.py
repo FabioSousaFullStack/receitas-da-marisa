@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Receita(models.Model):
     nome = models.CharField(max_length=255)
     ingredientes = models.TextField()
@@ -8,4 +9,4 @@ class Receita(models.Model):
     imagens = models.ImageField(blank=True)
 
     def __str__(self):
-        return  self.nome
+        return self.nome
